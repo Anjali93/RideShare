@@ -11,4 +11,6 @@ public interface RideProperties {
     public void addUserVehicle(Integer userId, Vehicle vehicle);
     public void offerRide(Ride ride);
     public Ride selectRide(Integer userId, location source, location destination, SelectionStrategy strategy);
+    public int getSavedFuel(Integer userID);
+
 }

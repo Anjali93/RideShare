@@ -51,8 +51,14 @@ public class RideShare {
         if(ride!= null)
             System.out.println(ride.toString());
 
-//        ride = rs.selectRide(4, location.DELHI, location.CHANDIGARH, new FastestRide());
-//        if(ride!= null)
-//            System.out.println(ride.toString());
+        ride = rs.selectRide(4, location.DELHI, location.CHANDIGARH, new FastestRide());
+        if(ride!= null)
+            System.out.println(ride.toString());
+
+        System.out.println("Fuel saved by  1   " + rs.getSavedFuel(1));
+        System.out.println("Fuel saved by  2  " + rs.getSavedFuel(2));
+        System.out.println("Fuel saved by  3   " + rs.getSavedFuel(3));
+        System.out.println("Fuel saved by  4   " + rs.getSavedFuel(4));
+        System.out.println("Fuel saved by  5   " + rs.getSavedFuel(5));
     }
 }

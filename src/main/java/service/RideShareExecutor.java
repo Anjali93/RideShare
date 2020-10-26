@@ -78,6 +78,7 @@ public class RideShareExecutor implements RideProperties {
 
             Ride ride = res.get();
 
+            // Move this logic to Ride class
             int availableSeats = ride.getAvailableSeat();
             if(availableSeats ==1){
                 availableRides.get(p).remove(ride);
@@ -94,6 +95,15 @@ public class RideShareExecutor implements RideProperties {
             System.out.println("No such Route available");
             return null;
         }
+    }
 
+    // Remove it and directly use in Driver class
+    @Override
+    public int getSavedFuel(Integer userID) {
+
+        if(users.containsKey(userID))
+            return users.get(userID).calculateFuelSaved();
+
+        return 0;
     }
 }
